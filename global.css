@@ -1,0 +1,317 @@
+body{
+color:white;
+overflow-x:hidden;
+overflow-y:hidden;
+margin:0;
+font-family: monospace;
+}
+
+a, #about, #lore, #survived, #ob, #leaders{
+display:inline-block;
+margin-left:.5rem;
+margin-right:.5rem;
+font-size:1.4rem;
+color:white;
+}
+
+span{
+font-size:.8rem;
+}
+
+#leaderboard{ 
+}
+
+.hvPointer:hover{
+cursor:pointer;
+}
+
+button{
+font-size:1.6rem; 
+font-weight:900;
+border:2px solid rgb(255, 255, 255);
+border-radius:8px;
+background-color: dimgray;
+}
+
+button:hover{
+cursor:pointer;
+}
+
+.container{
+width:100%;
+margin:0;
+text-align:center;
+margin-bottom:1rem;
+}
+
+#titleBox, #replayBox {
+border:2px solid rgb(255, 255, 255);
+border-radius:8px;
+background-color: dimgray;
+display: inline-block;
+padding:.5rem;
+margin-top:.5rem;
+}
+
+#replayBox{
+display:none;
+position:relative;
+z-index: 1
+}
+
+#leaderboard{
+font-size:0;
+}
+
+#gameInfo{
+border:2px solid rgb(255, 255, 255);
+border-radius:8px;
+background-color: rgba(58, 58, 58, 0.7);;
+position:absolute;
+top:-8px;
+left:0px;
+padding:.5rem;
+margin-top:.5rem; 
+text-align:left;
+visibility:hidden;
+line-height: 1.6;
+z-index: 1
+}
+
+#enemyInfo{
+border:2px solid rgb(255, 255, 255);
+border-radius:8px;
+background-color: rgba(58, 58, 58, 0.7);;
+position:absolute;
+top:-8px;
+right:0px;
+padding:.5rem;
+margin-top:.5rem; 
+text-align:left;
+visibility:hidden;
+}
+
+#shieldInfo{
+color:greenyellow;
+font-weight:900;
+}
+
+#healthBar{
+min-height:3px;
+background-color:greenyellow;
+position: relative;
+}
+
+#omegaBar{
+min-height:3px;
+background-color:rgb(187, 0, 255);
+position: relative;
+}
+
+#field{
+width:100%;
+min-height:800px;
+max-height:800px;
+box-shadow:0px 0px 0px 2px inset rgb(51, 255, 0);
+position:relative;
+margin:0;
+display:block;
+}
+
+#hb{
+width:74px;
+height:39px;
+position:absolute;
+left:-44px;
+bottom:-6px;
+border:1px solid red;
+border-radius:14px; 
+visibility:hidden;  
+}
+
+#shield{
+width:92px;
+height:56px;
+position:absolute;
+left:-58px;
+bottom:-16px;
+border:3px solid blue;
+border-radius:14px;   
+}
+
+#saucer{
+width:30px;
+height:30px;
+position:absolute;
+left:50%;
+bottom:20%;
+border:2px solid rgb(118, 118, 118);
+background-color: rgb(203, 203, 203); 
+border-radius:14px;
+}
+
+#boom{
+width:15px;
+height:15px;
+position:absolute;
+border:15px solid rgb(252, 255, 156);
+border-radius:1000000000px;  
+visibility:hidden;
+transform: translate(-55%, -41%);
+}
+
+.foeBoom{
+width:15px;
+height:15px;
+position:absolute;
+border:15px solid rgb(23, 195, 0);
+border-radius:1000000000px;  
+transform: translate(-25%, -22%);
+}
+
+#hull{
+right:31px;
+bottom:10px;
+border:2px solid rgb(118, 118, 118);
+background-color: rgb(203, 203, 203); 
+}
+
+.nacelle{
+width:30px;
+height:6px;
+position:absolute;
+border:2px solid rgb(118, 118, 118);
+background-color: rgb(203, 203, 203); 
+}
+
+.nacelleMount{
+width:3px;
+height:8px;  
+position:absolute;
+border-left:2px solid rgb(118, 118, 118);  
+border-right:2px solid rgb(118, 118, 118); 
+background-color: rgb(203, 203, 203); 
+}
+
+#portNacelleMount{
+right:48px;
+bottom:18px;
+}
+
+#starboardNacelleMount{
+right:48px;
+bottom:3px;  
+}
+
+#portNacelle{
+right:40px;
+bottom:25px;
+}
+
+#starboardNacelle{
+right:40px;
+bottom:-5px;
+}
+
+.foe{
+width:50px;
+height:50px;
+position:absolute;
+border:2px solid rgb(51, 255, 0);
+background-color: rgb(118, 118, 118); 
+}
+
+.foeDestroyed{
+width:50px;
+height:50px;
+position:absolute;
+border:none;
+background-color:none;    
+}
+.explGif{
+position:absolute;
+left:-25px; 
+bottom:-25px;
+height:100px;
+width:100px;
+}
+
+.foe_hb{
+width:54px;
+height:54px;
+position:absolute;
+left:-3px; 
+bottom:-3px;
+}
+
+.foeBeam{
+background-color: rgb(51, 255, 0);
+position:absolute;  
+}
+
+.foeBeam_0{
+width:600px;
+height:3px;
+left:25px;
+top:25px;
+}
+
+.foeBeam_1{
+width:3px;
+height:600px;
+left:25px;
+top:-575px;
+}
+
+.foeBeam_2{
+width:600px;
+height:3px;
+left:-575px;
+top:25px;
+}
+
+.foeBeam_3{
+width:3px;
+height:600px;
+left:25px;
+top:25px;
+}
+
+#beam{
+width:800px;
+height:3px;
+background-color: red;
+position:absolute;
+display:none;
+}
+
+.beamPurple{
+background-color: purple; 
+}
+
+.beam0{
+transform: rotate(0deg);
+}
+
+.beam45{
+transform: rotate(45deg);
+}
+
+.beam135{
+transform: rotate(135deg);
+transform-origin: 0% 0%;
+}
+
+.beam225{
+transform: rotate(225deg);
+transform-origin: 0% 0%;
+}
+
+.beam315{
+transform: rotate(315deg);
+transform-origin: 0% 0%;  
+}
+
+.mh_100{
+min-height:100px;
+}
